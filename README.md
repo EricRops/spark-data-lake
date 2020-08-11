@@ -8,10 +8,11 @@ The raw metadata resides on S3 as raw JSON files.
 Build an ETL pipeline for a Spark Data Lake. The initial and final data are stored in S3, and the data processing is done using Spark. 
 This Spark process is deployed using a cluster hosted on AWS.
 
-<img src="images/DataLake_Cycle_S3.PNG">  
+<img src="images/DataLake_Cycle_S3.PNG">
 
 *Spark Data Lake Option using AWS EMR and S3. HDFS not used, all data stored in S3. Data is loaded to EMR for processing, and saved back to S3.*
 *The EMR cluster is spun-up on demand, shutdown otherwise.*
+*Figure from Udacity lecture notes*
 
 ### Song JSON data
 The first dataset is a subset of real data from the [Million Song Dataset](http://millionsongdataset.com/).  
