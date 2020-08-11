@@ -1,0 +1,9 @@
+*.csv
+*.pyc
+*.pdf
+*.cfg
+*.log
+
+__pycache__/
+.ipynb_checkpoints/
+info/
