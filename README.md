@@ -34,14 +34,14 @@ It is optimized for analytic queries to answer any questions on user songplay be
 
 ### Instructions and workflow (assuming a Linux setup)
 1. Enter PEM file location, bootstrap path, and Subnet ID at the top of **run.sh**
-2. Execute **run.sh** using ```source ./run.sh``` in the terminal. DO NOT FORGET to include ```source```. The bash file performs the following tasks:
+2. Execute **run.sh** by typing ```source ./run.sh``` into the terminal. DO NOT FORGET to include ```source```. The bash file performs the following tasks:
     - Copies bootstrap file to users S3 location (so Spark can install Pandas upon cluster creation)
     - Creates an EMR cluster
     - Copies the Python scripts from this repo into the EMR cluster
     - SSH into the master node for direct connection to the cluster
 3. Once connected to the EMR cluster, enter ```spark-submit src/etl.py``` to execute the Python processing script, which performs the following:
     - Creates a SparkSession
-    - Loads the raw JSON metadata from Udacity S3 bucket. Processes the data. Writes to analytics tables in users S3 bucket (in parquet file format)
+    - Loads the raw JSON metadata from Udacity S3 bucket. Processes the data. Writes to analytics tables in users S3 bucket (in parquet file format).
     - Reads the parquet files back into Spark
     - Runs some test SQL queries and save results as CSV files
 4. Once the script is finished, type ```exit``` into the console. The **run.sh** file SHOULD then finish automatically:
