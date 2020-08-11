@@ -12,7 +12,7 @@ This Spark process is deployed using a cluster hosted on AWS.
 
 *Spark Data Lake Option using AWS EMR and S3. HDFS not used, all data stored in S3. Data is loaded to EMR for processing, and saved back to S3.*
 *The EMR cluster is spun-up on demand, shutdown otherwise.*
-*Figure from Udacity lecture notes*
+*Figure from Udacity lecture notes.*
 
 ### Song JSON data
 The first dataset is a subset of real data from the [Million Song Dataset](http://millionsongdataset.com/).  
@@ -30,7 +30,7 @@ The image below shows the structure of the final analytic tables.
 It is a typical STAR schema, with the fact table (songplays) and 4 dimension tables. 
 It is optimized for analytic queries to answer any questions on user songplay behavior! 
 
-<img src="images/Star_Schema.PNG" width="600" height="400">
+<img src="images/Star_Schema.PNG" width="550" height="400">
 
 ### Instructions and workflow (assuming a Linux setup)
 1. Enter PEM file location, bootstrap path, and Subnet ID at the top of **run.sh**
